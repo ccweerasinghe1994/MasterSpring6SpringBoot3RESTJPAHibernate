@@ -4,74 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d3b340a-76c5-4b2c-853e-5ca4dac0c2a4" name="Changes" comment="001 Introduction to wiring &amp; auto-wiring inside Spring">
-      <change afterPath="$PROJECT_DIR$/../example10/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example10/src/main/java/com/example/beans/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example10/src/main/java/com/example/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example10/src/main/java/com/example/config/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example10/src/main/java/com/example/main/Example10.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example11/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example11/src/main/java/com/example/beans/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example11/src/main/java/com/example/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example11/src/main/java/com/example/config/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example11/src/main/java/com/example/main/Example11.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example12/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example12/src/main/java/com/example/beans/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example12/src/main/java/com/example/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example12/src/main/java/com/example/config/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example12/src/main/java/com/example/main/Example12.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/src/main/java/com/example/beans/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/src/main/java/com/example/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/src/main/java/com/example/config/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/src/main/java/com/example/main/Example13.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/target/classes/com/example/beans/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/target/classes/com/example/beans/Vehicle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/target/classes/com/example/config/ProjectConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/target/classes/com/example/main/Example10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/target/classes/com/example/main/Example11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/target/classes/com/example/main/Example12.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example13/target/classes/com/example/main/Example9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/src/main/java/com/example/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/src/main/java/com/example/config/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/src/main/java/com/example/implementations/BridgeStoneTyres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/src/main/java/com/example/implementations/JblSpeakers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/src/main/java/com/example/implementations/MichileneStoneTyres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/src/main/java/com/example/implementations/SonySpeakers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/src/main/java/com/example/interfaces/Speakers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/src/main/java/com/example/interfaces/Tyre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/src/main/java/com/example/main/Execersise1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example14/src/main/java/com/example/services/VehicleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/src/main/java/com/example/beans/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/src/main/java/com/example/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/src/main/java/com/example/config/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/src/main/java/com/example/main/Example14.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/target/classes/com/example/beans/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/target/classes/com/example/beans/Vehicle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/target/classes/com/example/config/ProjectConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/target/classes/com/example/main/Example10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/target/classes/com/example/main/Example11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/target/classes/com/example/main/Example12.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/target/classes/com/example/main/Example13.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/target/classes/com/example/main/Example14.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../example15/target/classes/com/example/main/Example9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/src/main/java/com/example/beans/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/src/main/java/com/example/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/src/main/java/com/example/config/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/src/main/java/com/example/main/Example15.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/target/classes/com/example/beans/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/target/classes/com/example/beans/Vehicle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/target/classes/com/example/config/ProjectConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/target/classes/com/example/main/Example10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/target/classes/com/example/main/Example11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/target/classes/com/example/main/Example12.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/target/classes/com/example/main/Example13.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/target/classes/com/example/main/Example15.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceresise1/target/classes/com/example/main/Example9.class" afterDir="false" />
-    </list>
+    <list default="true" id="9d3b340a-76c5-4b2c-853e-5ca4dac0c2a4" name="Changes" comment="001 Introduction to wiring &amp; auto-wiring inside Spring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +43,11 @@
     "Application.Example12.executor": "Run",
     "Application.Example13.executor": "Run",
     "Application.Example14.executor": "Run",
+    "Application.Example15 (1).executor": "Run",
     "Application.Example15.executor": "Run",
+    "Application.Example17 (1).executor": "Run",
+    "Application.Example17.executor": "Run",
+    "Application.Example18.executor": "Run",
     "Application.Example2.executor": "Run",
     "Application.Example5 (1).executor": "Run",
     "Application.Example5 (2).executor": "Run",
@@ -123,7 +60,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/chama/OneDrive/Documents/GitHub/SpringBoot/MasterSpring6SpringBoot3RESTJPAHibernate",
+    "last_opened_file_path": "C:/Users/chama/OneDrive/Documents/GitHub/SpringBoot/MasterSpring6SpringBoot3RESTJPAHibernate/example_17",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,10 +81,10 @@
       <recent name="com.example.implementations" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Execersise1">
-    <configuration name="Example11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.main.Example11" />
-      <module name="example2 (8)" />
+  <component name="RunManager" selected="Application.Example17 (1)">
+    <configuration name="Example15 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.main.Example15" />
+      <module name="example2 (13)" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.main.*" />
@@ -158,9 +95,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Example12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.main.Example12" />
-      <module name="example2 (9)" />
+    <configuration name="Example15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.main.Example15" />
+      <module name="example2 (12)" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.main.*" />
@@ -171,22 +108,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Example13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.main.Example13" />
-      <module name="example2 (10)" />
+    <configuration name="Example17 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.example.main.Example17" />
+      <module name="example_17" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Example14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.main.Example14" />
-      <module name="example2 (11)" />
+    <configuration name="Example18" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.main.Example18" />
+      <module name="example2 (14)" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.main.*" />
@@ -223,23 +167,26 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Example17 (1)" />
+        <item itemvalue="Application.Example18" />
+        <item itemvalue="Application.Example15 (1)" />
+        <item itemvalue="Application.Example15" />
         <item itemvalue="Application.Execersise1" />
-        <item itemvalue="Application.Example14" />
-        <item itemvalue="Application.Example13" />
-        <item itemvalue="Application.Example12" />
-        <item itemvalue="Application.Example11" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9d3b340a-76c5-4b2c-853e-5ca4dac0c2a4" name="Changes" comment="" />
@@ -250,7 +197,8 @@
       <workItem from="1734586227177" duration="155000" />
       <workItem from="1734586502045" duration="2032000" />
       <workItem from="1734589967563" duration="2155000" />
-      <workItem from="1734594010424" duration="19024000" />
+      <workItem from="1734594010424" duration="19811000" />
+      <workItem from="1734689712858" duration="10401000" />
     </task>
     <task id="LOCAL-00001" summary="Creating Beans using @Bean annotation">
       <option name="closed" value="true" />
@@ -284,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734662521852</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="001 Introduction to wiring &amp; auto-wiring inside Spring">
+      <option name="closed" value="true" />
+      <created>1734715390766</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734715390766</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,5 +251,15 @@
     <MESSAGE value=" Understanding NoUniqueBeanDefinitionException in Spring" />
     <MESSAGE value="001 Introduction to wiring &amp; auto-wiring inside Spring" />
     <option name="LAST_COMMIT_MESSAGE" value="001 Introduction to wiring &amp; auto-wiring inside Spring" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
