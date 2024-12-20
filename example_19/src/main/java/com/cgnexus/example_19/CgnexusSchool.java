@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Example19Application {
+public class CgnexusSchool {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Example19Application.class, args);
+		SpringApplication.run(CgnexusSchool.class, args);
 	}
 
 }
