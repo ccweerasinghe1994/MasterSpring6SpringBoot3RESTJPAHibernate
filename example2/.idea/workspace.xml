@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d3b340a-76c5-4b2c-853e-5ca4dac0c2a4" name="Changes" comment="001 Introduction to wiring &amp; auto-wiring inside Spring" />
+    <list default="true" id="9d3b340a-76c5-4b2c-853e-5ca4dac0c2a4" name="Changes" comment="001 Introduction to wiring &amp; auto-wiring inside Spring">
+      <change beforePath="$PROJECT_DIR$/../example_17/src/main/java/com/example/aspects/LoggerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../example_17/src/main/java/com/example/aspects/LoggerAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example_17/src/main/java/com/example/aspects/VehicleStartCheckAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../example_17/src/main/java/com/example/aspects/VehicleStartCheckAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example_17/src/main/java/com/example/main/Example17.java" beforeDir="false" afterPath="$PROJECT_DIR$/../example_17/src/main/java/com/example/main/Example17.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +49,7 @@
     "Application.Example14.executor": "Run",
     "Application.Example15 (1).executor": "Run",
     "Application.Example15.executor": "Run",
-    "Application.Example17 (1).executor": "Run",
+    "Application.Example17 (1).executor": "Debug",
     "Application.Example17.executor": "Run",
     "Application.Example18.executor": "Run",
     "Application.Example2.executor": "Run",
@@ -60,7 +64,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/chama/OneDrive/Documents/GitHub/SpringBoot/MasterSpring6SpringBoot3RESTJPAHibernate/example_17",
+    "last_opened_file_path": "C:/Users/chama/OneDrive/Documents/GitHub/SpringBoot/MasterSpring6SpringBoot3RESTJPAHibernate/example_19",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -165,6 +169,13 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <configuration name="Example19Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="example_19" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cgnexus.example_19.Example19Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Example17 (1)" />
@@ -198,7 +209,7 @@
       <workItem from="1734586502045" duration="2032000" />
       <workItem from="1734589967563" duration="2155000" />
       <workItem from="1734594010424" duration="19811000" />
-      <workItem from="1734689712858" duration="10401000" />
+      <workItem from="1734689712858" duration="13682000" />
     </task>
     <task id="LOCAL-00001" summary="Creating Beans using @Bean annotation">
       <option name="closed" value="true" />
@@ -259,6 +270,16 @@
           <properties class="java.lang.RuntimeException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../example_17/src/main/java/com/example/aspects/LoggerAspect.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../example_17/src/main/java/com/example/aspects/LoggerAspect.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

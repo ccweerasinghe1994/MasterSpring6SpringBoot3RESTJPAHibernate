@@ -4,22 +4,8 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../example1/pom.xml" />
-        <option value="$PROJECT_DIR$/../example3/pom.xml" />
-        <option value="$PROJECT_DIR$/../example5/pom.xml" />
-        <option value="$PROJECT_DIR$/../example6/pom.xml" />
-        <option value="$PROJECT_DIR$/../example7/pom.xml" />
-        <option value="$PROJECT_DIR$/../example9/pom.xml" />
-        <option value="$PROJECT_DIR$/../example10/pom.xml" />
-        <option value="$PROJECT_DIR$/../example11/pom.xml" />
-        <option value="$PROJECT_DIR$/../example12/pom.xml" />
-        <option value="$PROJECT_DIR$/../example13/pom.xml" />
-        <option value="$PROJECT_DIR$/../example14/pom.xml" />
-        <option value="$PROJECT_DIR$/../example15/pom.xml" />
-        <option value="$PROJECT_DIR$/../example16/pom.xml" />
         <option value="$PROJECT_DIR$/../example17/pom.xml" />
-        <option value="$PROJECT_DIR$/../example_17/pom.xml" />
+        <option value="$PROJECT_DIR$/../example_19/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
