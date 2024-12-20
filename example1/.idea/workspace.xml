@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d3b340a-76c5-4b2c-853e-5ca4dac0c2a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/beans/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/config/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/main/Example1.java" afterDir="false" />
+    <list default="true" id="9d3b340a-76c5-4b2c-853e-5ca4dac0c2a4" name="Changes" comment="Creating Beans using @Bean annotation">
+      <change beforePath="$PROJECT_DIR$/../example2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../example2/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +38,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/chama/OneDrive/Documents/GitHub/SpringBoot/MasterSpring6SpringBoot3RESTJPAHibernate/example1",
+    "last_opened_file_path": "C:/Users/chama/OneDrive/Documents/GitHub/SpringBoot/MasterSpring6SpringBoot3RESTJPAHibernate/example2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,11 +96,24 @@
       <updated>1734586225889</updated>
       <workItem from="1734586227177" duration="155000" />
       <workItem from="1734586502045" duration="2032000" />
-      <workItem from="1734589967563" duration="1500000" />
+      <workItem from="1734589967563" duration="2186000" />
     </task>
+    <task id="LOCAL-00001" summary="Creating Beans using @Bean annotation">
+      <option name="closed" value="true" />
+      <created>1734593486803</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734593486803</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creating Beans using @Bean annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating Beans using @Bean annotation" />
   </component>
 </project>
