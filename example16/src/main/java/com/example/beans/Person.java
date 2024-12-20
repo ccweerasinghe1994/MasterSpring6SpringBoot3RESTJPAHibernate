@@ -3,7 +3,7 @@ package com.example.beans;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("personBean")
 @Lazy
 public class Person {
     private String name;
@@ -13,6 +13,7 @@ public class Person {
 
     public Person(Vehicle vehicle) {
         this.vehicle = vehicle;
+        System.out.println("Person class is created by Spring IOC container");
     }
 
     public void setName(String name) {

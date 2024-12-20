@@ -1,21 +1,16 @@
 package com.example.beans;
 
 import com.example.services.VehicleService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Vehicle {
     private String name;
 
-    private VehicleService vehicleService;
+    private final VehicleService vehicleService;
 
-    @Autowired
     public Vehicle(VehicleService vehicleService) {
         this.vehicleService = vehicleService;
-    }
-
-    public Vehicle() {
         System.out.println("Vehicle class is created by Spring IOC container");
     }
 
