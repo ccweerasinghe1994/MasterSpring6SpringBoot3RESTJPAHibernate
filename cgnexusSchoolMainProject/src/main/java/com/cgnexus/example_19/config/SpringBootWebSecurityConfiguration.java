@@ -55,8 +55,8 @@ public class SpringBootWebSecurityConfiguration {
     public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
 
         UserDetails user = User.withDefaultPasswordEncoder()
-                .username("user")
-                .password("password")
+                .username("chamara")
+                .password("12345")
                 .roles("USER")
                 .build();
 
