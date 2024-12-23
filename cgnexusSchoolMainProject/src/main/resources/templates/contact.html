@@ -49,7 +49,7 @@ Author URL: http://w3layouts.com
                     <li class="alert alert-danger" role="alert"
                         th:each="error : ${#fields.errors('contact.*')}" th:text="${error}"/>
                 </ul>
-                <form class="signin-form" method="post" th:action="@{/saveMsg}" th:object="${contact}">
+                <form action="/saveMsg" class="signin-form" method="post" th:object="${contact}">
                     <div class="input-grids">
                         <div class="row">
                             <div class="col-sm-6">

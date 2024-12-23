@@ -15,9 +15,17 @@ public class SpringBootWebSecurityConfiguration {
     @Bean
     @Order(SecurityProperties.BASIC_AUTH_ORDER)
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((requests) -> requests
-                .anyRequest().denyAll()
-        );
+        http
+                .csrf((csrf) -> csrf.disable())
+                .authorizeHttpRequests((requests) -> requests
+                        .requestMatchers("/home", "/").permitAll()
+                        .requestMatchers("/assets/**").permitAll()
+                        .requestMatchers("/courses").permitAll()
+                        .requestMatchers("/saveMsg").permitAll()
+                        .requestMatchers("/about").permitAll()
+                        .requestMatchers("/contact").permitAll()
+                        .requestMatchers("/holidays/**").permitAll()
+                );
         http.formLogin(withDefaults());
         http.httpBasic(withDefaults());
         return http.build();
