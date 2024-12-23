@@ -1,6 +1,7 @@
 package com.cgnexus.example_19.config;
 
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
+import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -19,19 +20,24 @@ public class SpringBootWebSecurityConfiguration {
     @Order(SecurityProperties.BASIC_AUTH_ORDER)
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
-        http.csrf((csrf) -> csrf.ignoringRequestMatchers("/saveMsg"));
+        http.csrf((csrf) -> csrf
+                .ignoringRequestMatchers("/saveMsg")
+                .ignoringRequestMatchers(PathRequest.toH2Console())
+        );
 
         http.authorizeHttpRequests((requests) -> requests
-                .requestMatchers("/dashboard").authenticated()
-                .requestMatchers("/home", "/").permitAll()
-                .requestMatchers("/assets/**").permitAll()
-                .requestMatchers("/courses").permitAll()
-                .requestMatchers("/saveMsg").permitAll()
-                .requestMatchers("/about").permitAll()
-                .requestMatchers("/contact").permitAll()
-                .requestMatchers("/login").permitAll()
+                .requestMatchers("/displayMessages").hasRole("ADMIN")
+                .requestMatchers("/closeMsg/**").hasRole("ADMIN")
+                .requestMatchers("/", "/home").permitAll()
                 .requestMatchers("/holidays/**").permitAll()
+                .requestMatchers("/contact").permitAll()
+                .requestMatchers("/saveMsg").permitAll()
+                .requestMatchers("/courses").permitAll()
+                .requestMatchers("/about").permitAll()
+                .requestMatchers("/assets/**").permitAll()
+                .requestMatchers("/login").permitAll()
                 .requestMatchers("/logout").permitAll()
+                .requestMatchers(PathRequest.toH2Console()).permitAll()
         );
 
         http.formLogin(loginConfig -> loginConfig
@@ -48,7 +54,8 @@ public class SpringBootWebSecurityConfiguration {
 //        );
 
         http.httpBasic(withDefaults());
-
+        http.headers(headersConfigurer -> headersConfigurer
+                .frameOptions(frameOptionsConfig -> frameOptionsConfig.disable()));
         return http.build();
     }
 
