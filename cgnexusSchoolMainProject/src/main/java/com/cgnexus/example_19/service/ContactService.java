@@ -3,11 +3,11 @@ package com.cgnexus.example_19.service;
 import com.cgnexus.example_19.model.Contact;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 
 @Service
 @Slf4j
-@RequestScope
+@SessionScope
 public class ContactService {
 
     private int counter;
