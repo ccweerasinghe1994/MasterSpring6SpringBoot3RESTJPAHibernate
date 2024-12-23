@@ -6,12 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-//@ApplicationScope
-//@SessionScope
-//@RequestScope
 public class ContactService {
-
-    private int counter;
 
     public ContactService() {
         System.out.println("ContactService instance created");
@@ -30,11 +25,4 @@ public class ContactService {
         return isSaved;
     }
 
-    public int getCounter() {
-        return counter;
-    }
-
-    public void setCounter(int counter) {
-        this.counter = counter;
-    }
 }

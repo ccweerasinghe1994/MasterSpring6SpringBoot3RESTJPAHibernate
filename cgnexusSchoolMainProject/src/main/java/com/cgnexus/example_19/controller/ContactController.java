@@ -33,8 +33,6 @@ public class ContactController {
             return "contact";
         }
         contactService.saveMessageDetails(contact);
-        contactService.setCounter(contactService.getCounter() + 1);
-        log.info("Total messages received so far: {}", contactService.getCounter());
         return "redirect:/contact";
     }
 
