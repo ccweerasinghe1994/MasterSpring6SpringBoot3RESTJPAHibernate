@@ -19,7 +19,7 @@ public class SpringBootWebSecurityConfiguration {
     @Order(SecurityProperties.BASIC_AUTH_ORDER)
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
-        http.csrf((csrf) -> csrf.disable());
+        http.csrf((csrf) -> csrf.ignoringRequestMatchers("/saveMsg"));
 
         http.authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/dashboard").authenticated()
@@ -31,6 +31,7 @@ public class SpringBootWebSecurityConfiguration {
                 .requestMatchers("/contact").permitAll()
                 .requestMatchers("/login").permitAll()
                 .requestMatchers("/holidays/**").permitAll()
+                .requestMatchers("/logout").permitAll()
         );
 
         http.formLogin(loginConfig -> loginConfig
@@ -39,12 +40,12 @@ public class SpringBootWebSecurityConfiguration {
                 .failureUrl("/login?error=true")
                 .permitAll()
         );
-
-        http.logout(logoutConfig -> logoutConfig
-                .logoutSuccessUrl("/login?logout=true")
-                .invalidateHttpSession(true)
-                .permitAll()
-        );
+//        we are adding a custom route for this
+//        http.logout(logoutConfig -> logoutConfig
+//                .logoutSuccessUrl("/login?logout=true")
+//                .invalidateHttpSession(true)
+//                .permitAll()
+//        );
 
         http.httpBasic(withDefaults());
 
