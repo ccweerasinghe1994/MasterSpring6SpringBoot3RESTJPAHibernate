@@ -44,7 +44,7 @@ Author URL: http://w3layouts.com
         </div>
         <div class="row login-block">
             <div class="col-md-6 login-center">
-                <form action="/login" class="signin-form" method="post">
+                <form class="signin-form" method="post" th:action="@{/login}">
                     <div class="col-md-8 login-center input-grids">
                         <li class="alert alert-danger" role="alert" th:if="${!#strings.isEmpty(errorMessage)}"
                             th:text="${errorMessage}"/>
@@ -52,6 +52,7 @@ Author URL: http://w3layouts.com
                                type="text"/>
                         <input class="login-input" id="password" name="password" placeholder="Password"
                                type="password"/>
+                        <input th:name="${_csrf.parameterName}" th:value="${_csrf.token}" type="hidden"/>
                     </div>
                     <div class="col-md-8 login-center text-start">
                         <button class="btn btn-style btn-style-3 text-left">Log In</button>
