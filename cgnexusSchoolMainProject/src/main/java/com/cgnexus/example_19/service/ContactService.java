@@ -6,7 +6,17 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
+//@ApplicationScope
+//@SessionScope
+//@RequestScope
 public class ContactService {
+
+    private int counter;
+
+    public ContactService() {
+        System.out.println("ContactService instance created");
+    }
+
     /**
      * Save Contact Details into DB
      *
@@ -18,5 +28,13 @@ public class ContactService {
         //TODO - Need to persist the data into the DB table
         log.info(contact.toString());
         return isSaved;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
     }
 }
