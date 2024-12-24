@@ -42,4 +42,14 @@ public class ContactService {
     public List<Contact> findMessagesWithOpenStatus() {
         return contactRepository.findMessagesWithOpenStatus(CgnexusConstants.OPEN);
     }
+
+    public boolean updateStatus(int contactId, String updatedBy) {
+        boolean isUpdated = false;
+        int result = contactRepository.updateStatus(contactId, CgnexusConstants.CLOSE, updatedBy);
+        if (result > 0) {
+            isUpdated = true;
+        }
+        return isUpdated;
+
+    }
 }
