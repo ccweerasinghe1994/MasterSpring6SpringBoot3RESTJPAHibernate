@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -34,8 +35,11 @@ public class ContactService {
         if (result > 0) {
             isSaved = true;
         }
-        
+
         return isSaved;
     }
 
+    public List<Contact> findMessagesWithOpenStatus() {
+        return contactRepository.findMessagesWithOpenStatus(CgnexusConstants.OPEN);
+    }
 }
