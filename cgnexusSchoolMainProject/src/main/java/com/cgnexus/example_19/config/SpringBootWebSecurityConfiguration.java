@@ -26,6 +26,7 @@ public class SpringBootWebSecurityConfiguration {
         );
 
         http.authorizeHttpRequests((requests) -> requests
+                .requestMatchers("/dashboard").authenticated()
                 .requestMatchers("/displayMessages").hasRole("ADMIN")
                 .requestMatchers("/closeMsg/**").hasRole("ADMIN")
                 .requestMatchers("/", "/home").permitAll()
@@ -70,7 +71,7 @@ public class SpringBootWebSecurityConfiguration {
 
         UserDetails admin = User.withDefaultPasswordEncoder()
                 .username("admin")
-                .password("password")
+                .password("54321")
                 .roles("ADMIN")
                 .build();
         return new InMemoryUserDetailsManager(user, admin);
