@@ -19,18 +19,22 @@ public class SpringBootWebSecurityConfiguration {
     @Order(SecurityProperties.BASIC_AUTH_ORDER)
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
-        http.csrf((csrf) -> csrf.ignoringRequestMatchers("/saveMsg"));
+        http.csrf((csrf) -> csrf
+                .ignoringRequestMatchers("/saveMsg")
+        );
 
         http.authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/dashboard").authenticated()
-                .requestMatchers("/home", "/").permitAll()
-                .requestMatchers("/assets/**").permitAll()
-                .requestMatchers("/courses").permitAll()
-                .requestMatchers("/saveMsg").permitAll()
-                .requestMatchers("/about").permitAll()
-                .requestMatchers("/contact").permitAll()
-                .requestMatchers("/login").permitAll()
+                .requestMatchers("/displayMessages").hasRole("ADMIN")
+                .requestMatchers("/closeMsg/**").hasRole("ADMIN")
+                .requestMatchers("/", "/home").permitAll()
                 .requestMatchers("/holidays/**").permitAll()
+                .requestMatchers("/contact").permitAll()
+                .requestMatchers("/saveMsg").permitAll()
+                .requestMatchers("/courses").permitAll()
+                .requestMatchers("/about").permitAll()
+                .requestMatchers("/assets/**").permitAll()
+                .requestMatchers("/login").permitAll()
                 .requestMatchers("/logout").permitAll()
         );
 
@@ -40,12 +44,6 @@ public class SpringBootWebSecurityConfiguration {
                 .failureUrl("/login?error=true")
                 .permitAll()
         );
-//        we are adding a custom route for this
-//        http.logout(logoutConfig -> logoutConfig
-//                .logoutSuccessUrl("/login?logout=true")
-//                .invalidateHttpSession(true)
-//                .permitAll()
-//        );
 
         http.httpBasic(withDefaults());
 
@@ -63,7 +61,7 @@ public class SpringBootWebSecurityConfiguration {
 
         UserDetails admin = User.withDefaultPasswordEncoder()
                 .username("admin")
-                .password("password")
+                .password("54321")
                 .roles("ADMIN")
                 .build();
         return new InMemoryUserDetailsManager(user, admin);

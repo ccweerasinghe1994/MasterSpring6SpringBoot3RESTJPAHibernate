@@ -6,12 +6,14 @@ import com.cgnexus.example_19.service.ContactService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -34,6 +36,20 @@ public class ContactController {
         }
         contactService.saveMessageDetails(contact);
         return "redirect:/contact";
+    }
+
+    @GetMapping("/displayMessages")
+    public ModelAndView displayMessages(Model model) {
+        List<Contact> contacts = contactService.findMessagesWithOpenStatus();
+        ModelAndView modelAndView = new ModelAndView("messages");
+        modelAndView.addObject("contactMsgs", contacts);
+        return modelAndView;
+    }
+
+    @GetMapping("/closeMsg")
+    public String closeMsg(@RequestParam int id, Authentication authentication) {
+        contactService.updateStatus(id, authentication.getName());
+        return "redirect:/displayMessages";
     }
 
 }
