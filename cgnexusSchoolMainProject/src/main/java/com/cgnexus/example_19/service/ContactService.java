@@ -41,7 +41,7 @@ public class ContactService {
     }
 
     public List<Contact> findMessagesWithOpenStatus() {
-        return contactRepository.findMessagesWithOpenStatus(CgnexusConstants.OPEN);
+        return contactRepository.findByStatus(CgnexusConstants.OPEN);
     }
 
     public boolean updateStatus(int contactId, String updatedBy) {
