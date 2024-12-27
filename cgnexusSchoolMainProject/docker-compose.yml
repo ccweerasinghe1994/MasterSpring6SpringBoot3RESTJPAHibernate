@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql:9.0.1
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlspring
+      MYSQL_DATABASE: eazyschool
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: mysqlspring
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql

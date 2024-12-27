@@ -21,6 +21,7 @@ public class SpringBootWebSecurityConfiguration {
 
         http.csrf((csrf) -> csrf
                 .ignoringRequestMatchers("/saveMsg")
+                .ignoringRequestMatchers("/public/**")
         );
 
         http.authorizeHttpRequests((requests) -> requests
@@ -36,6 +37,7 @@ public class SpringBootWebSecurityConfiguration {
                 .requestMatchers("/assets/**").permitAll()
                 .requestMatchers("/login").permitAll()
                 .requestMatchers("/logout").permitAll()
+                .requestMatchers("/public/**").permitAll()
         );
 
         http.formLogin(loginConfig -> loginConfig
