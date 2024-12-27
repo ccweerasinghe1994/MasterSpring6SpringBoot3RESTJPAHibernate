@@ -6,7 +6,6 @@ import com.cgnexus.example_19.service.ContactService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -47,8 +46,8 @@ public class ContactController {
     }
 
     @GetMapping("/closeMsg")
-    public String closeMsg(@RequestParam int id, Authentication authentication) {
-        contactService.updateStatus(id, authentication.getName());
+    public String closeMsg(@RequestParam int id) {
+        contactService.updateStatus(id);
         return "redirect:/displayMessages";
     }
 
