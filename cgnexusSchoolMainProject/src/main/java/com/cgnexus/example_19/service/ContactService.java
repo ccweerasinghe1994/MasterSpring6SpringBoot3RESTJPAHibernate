@@ -6,8 +6,8 @@ import com.cgnexus.example_19.repository.ContactRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -28,11 +28,9 @@ public class ContactService {
     public boolean saveMessageDetails(Contact contact) {
         boolean isSaved = false;
         contact.setStatus(CgnexusConstants.OPEN);
-        contact.setCreatedBy(CgnexusConstants.ANONYMOUS);
-        contact.setCreatedAt(LocalDateTime.now());
-        int result = contactRepository.saveContactMessage(contact);
+        Contact result = contactRepository.save(contact);
 
-        if (result > 0) {
+        if (result.getContactId() > 0) {
             isSaved = true;
         }
 
@@ -40,13 +38,20 @@ public class ContactService {
     }
 
     public List<Contact> findMessagesWithOpenStatus() {
-        return contactRepository.findMessagesWithOpenStatus(CgnexusConstants.OPEN);
+        return contactRepository.findByStatus(CgnexusConstants.OPEN);
     }
 
-    public boolean updateStatus(int contactId, String updatedBy) {
+    public boolean updateStatus(int contactId) {
         boolean isUpdated = false;
-        int result = contactRepository.updateStatus(contactId, CgnexusConstants.CLOSE, updatedBy);
-        if (result > 0) {
+        Optional<Contact> contact = contactRepository.findById(contactId);
+
+        contact.ifPresent(contact1 -> {
+            contact1.setStatus(CgnexusConstants.CLOSE);
+        });
+
+        Contact updatedContact = contactRepository.save(contact.get());
+
+        if (updatedContact.getUpdatedBy() != null) {
             isUpdated = true;
         }
         return isUpdated;
