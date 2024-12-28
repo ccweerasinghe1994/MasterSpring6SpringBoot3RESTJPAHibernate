@@ -1,4 +1,4 @@
-create database eazyschool;
+CREATE DATABASE IF NOT EXISTS eazyschool;
 
 use eazyschool;
 
@@ -27,3 +27,77 @@ CREATE TABLE IF NOT EXISTS `holidays`
     `updated_at` TIMESTAMP   DEFAULT NULL,
     `updated_by` varchar(50) DEFAULT NULL
 );
+
+CREATE TABLE IF NOT EXISTS `roles`
+(
+    `role_id`    int         NOT NULL AUTO_INCREMENT,
+    `role_name`  varchar(50) NOT NULL,
+    `created_at` TIMESTAMP   NOT NULL,
+    `created_by` VARCHAR(50) NOT NULL,
+    `updated_at` TIMESTAMP   DEFAULT NULL,
+    `updated_by` VARCHAR(50) DEFAULT NULL,
+    PRIMARY KEY (`role_id`)
+
+);
+
+CREATE TABLE IF NOT EXISTS `address`
+(
+    `address_id` int          NOT NULL AUTO_INCREMENT,
+    `address1`   VARCHAR(200) NOT NULL,
+    `address2`   VARCHAR(200) NOT NULL,
+    `city`       VARCHAR(50)  NOT NULL,
+    `state`      VARCHAR(50)  NOT NULL,
+    `zip_code`   int          NOT NULL,
+    `created_at` TIMESTAMP    NOT NULL,
+    `created_by` VARCHAR(50)  NOT NULL,
+    `updated_at` TIMESTAMP   DEFAULT NULL,
+    `updated_by` VARCHAR(50) DEFAULT NULL,
+    PRIMARY KEY (`address_id`)
+
+
+);
+
+DROP TABLE IF EXISTS `person`;
+CREATE TABLE IF NOT EXISTS `person`
+(
+    `person_id`     int          NOT NULL AUTO_INCREMENT,
+    `name`          VARCHAR(100) NOT NULL,
+    `email`         VARCHAR(50)  NOT NULL,
+    `mobile_number` VARCHAR(50)  NOT NULL,
+    `pwd`           VARCHAR(200) NOT NULL,
+    `role_id`       int          NULL,
+    `address_id`    int          NULL,
+    `created_at`    TIMESTAMP    NOT NULL,
+    `created_by`    VARCHAR(50)  NOT NULL,
+    `updated_at`    TIMESTAMP   DEFAULT NULL,
+    `updated_by`    VARCHAR(50) DEFAULT NULL,
+    PRIMARY KEY (`person_id`),
+    FOREIGN KEY (role_id) REFERENCES roles (role_id),
+    FOREIGN KEY (address_id) REFERENCES address (address_id)
+);
+
+# let's update the person table the address_id a nullable field
+
+ALTER TABLE person
+    MODIFY address_id int NULL;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
